@@ -1,5 +1,105 @@
 # PROFOUND 2001 — Absolute Design Constitution
 
+A design-first system that rejects software bloat and favors deterministic, human-readable, offline-capable artifacts. PROFOUND 2001 defines immutable design laws and engineering constraints for building small, understandable, and long-lived software.
+
+- Status: Draft / Design Constitution
+- Primary language (output): Python (machine layer target: C)
+- Offline-first, deterministic, knowledge-centric approach
+
+---
+
+## Table of Contents
+
+- [Summary](#summary)
+- [Goals & Principles](#goals--principles)
+- [Quick Start](#quick-start)
+- [Contributing](#contributing)
+- [Maintainers & Contact](#maintainers--contact)
+- [License](#license)
+- [Design Constitution (full)](#design-constitution-full)
+
+---
+
+## Summary
+
+PROFOUND 2001 is not a library, framework, or service — it is a set of rules and design practices intended to produce finished, durable artifacts that are understandable and owned locally. Its central purpose is to reverse modern software bloat and fragility by enforcing strict constraints on complexity, dependencies, and runtime behavior.
+
+This repository contains the project’s design constitution and supporting material. Treat the constitution as the authoritative guide for all development decisions.
+
+---
+
+## Goals & Principles
+
+Key objectives:
+
+- Convert human intent into small, understandable, deterministic software.
+- Run entirely offline after initial installation.
+- Produce finished, ownable artifacts (standalone scripts, single-file HTML, or executables).
+- Favor clarity, efficiency, and longevity over abstraction and scale.
+- Reject hidden behavior, unnecessary external dependencies, and cloud execution by default.
+
+Core constraints (high-level):
+
+- Offline-first and no telemetry.
+- Deterministic: same input → same output.
+- Micro-function law: small functions with one responsibility (see full constitution).
+- Patterns over long-lived libraries; keep extracted algorithmic cores local.
+
+---
+
+## Quick Start
+
+1. Clone the repository:
+   - git clone https://github.com/DxEVA/Profound-2001-v.0.1.git
+2. Read the constitution:
+   - Open `profound2001/README.md` (this file) in your editor or view it on GitHub.
+3. Follow the Design Constitution when proposing changes or implementing features:
+   - Keep changes minimal, explicit, and justified.
+4. If adding code, include:
+   - A clear README for the piece you add.
+   - Tests or verification artifacts showing determinism and resource use.
+   - Provenance metadata for any extracted or adapted algorithm.
+
+---
+
+## Contributing
+
+This repo is governed by the Design Constitution. Contributions are welcome but must comply with the rules below:
+
+- Always reference the relevant section of the constitution when proposing changes.
+- Keep additions minimal and explicit. Every line must justify itself.
+- When proposing external libraries, document why the logic cannot be reasonably expressed as local patterns and how you will convert the core algorithm into local patterns.
+- When behavior is underspecified, ask structured, binary questions (logic clarity or conditions) before implementing.
+- Provide provenance metadata for any imported or adapted logic.
+- Add performance/time complexity estimations and resource usage where relevant.
+
+If you want help shaping a contribution (issue, patch, or RFC), open an issue describing:
+- What you want to add/change
+- How it aligns with the constitution
+- What constraints and resource estimates apply
+
+---
+
+## Maintainers & Contact
+
+- Maintainer: DxEVA (repo owner)
+- For design questions, open an issue labeled `design`.
+- For implementation proposals, open an issue labeled `proposal`.
+
+---
+
+## License
+
+No license file is included in this repository. Add a LICENSE if you want to grant reuse permissions. If you want, I can add a recommended license (e.g., MIT, CC-BY) — tell me which one you prefer.
+
+---
+
+## Design Constitution (full)
+
+> The document below is the full, authoritative Design Constitution for PROFOUND 2001. Treat it as immutable law for the project unless an explicit, recorded amendment is accepted by maintainers.
+
+# PROFOUND 2001 — Absolute Design Constitution
+
 ## 1. Core Purpose
 
 PROFOUND 2001 exists to reverse modern software bloat and fragility.
@@ -328,7 +428,7 @@ You may NOT:
 * Introduce bloat
 * Trade clarity for convenience
 
- Implementation instructions will follow later.
+Implementation instructions will follow later.
 
 Until then:
-**Design everything as if it must survive unchanged for 20 years.**
+**Design everything as if it must survive unchanged for 20 years.
