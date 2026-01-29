@@ -1,0 +1,14 @@
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.venv
+env/
+venv/
+PROFOUND_VALIDATION_REPORT_v0.1_COMPLETE.md
+validation_results_*.txt
+test_*.py
+*test.py
+*.md
+!README.md
+!TEST_GUIDE.md
